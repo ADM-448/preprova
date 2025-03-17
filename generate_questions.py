@@ -60,7 +60,7 @@ def generate_questions(preprova_id, pdf_url):
         response = client.chat.completions.create(
             model="gpt-3.5-turbo",
             messages=[
-                {"role": "system", "content": "Você é um criador de questões para estudo médico."},
+                {"role": "system", "content": "Você é um criador de questões para estudo do contexto do arquivo que foi enviado."},
                 {"role": "user", "content": prompt}
             ]
         )
